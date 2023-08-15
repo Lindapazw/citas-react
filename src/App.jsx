@@ -7,8 +7,16 @@ function App() {
 
   sumar();
 
+  let numero = 0;
+
+  if(numero === 0) {
+    console.log('hola');
+  }
+
+  const edad = 19;
   return (
     <>
+      {edad >= 18 ? 'eres mayor' : 'eres menor'}
       <h1>Hola mundo</h1>
     </>
   )
