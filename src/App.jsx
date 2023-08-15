@@ -17,7 +17,7 @@ function App() {
   return (
     <>
       {edad >= 18 ? 'eres mayor' : 'eres menor'}
-      <h1>Hola mundo</h1>
+      <h1>{'Hola mundo'.toLowerCase()}</h1>
     </>
   )
 }
