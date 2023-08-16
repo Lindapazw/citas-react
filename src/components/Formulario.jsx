@@ -29,7 +29,7 @@ const Formulario = () => {
             </p>
 
             <form className="mt-5 bg-white shadow-md rounded-lg py-5 px-5" onSubmit={handleSubmit}>
-            {error ? 'Si hay error' : 'No hay error'}
+            {error && 'Si hay error' }
                 <div>
                     <label className="font-bold" htmlFor="nombre">Nombre mascota: {nombre}</label>
                     <input className="block mt-2 border-2 w-full p-2 placeholder-gray-400 rounded-lg" type="text" placeholder="Nombre de la mascota" id="nombre" value={nombre} onChange={ (e) => setNombre(e.target.value) } />
