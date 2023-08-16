@@ -16,7 +16,6 @@ const Formulario = () => {
         if([nombre, propietario, email, fecha, sintomas].includes('')) {
             setError(true);
         } else {
-            console.log('Todos los campos están llenos');
             setError(false);
         }
     };
@@ -29,7 +28,8 @@ const Formulario = () => {
             </p>
 
             <form className="mt-5 bg-white shadow-md rounded-lg py-5 px-5" onSubmit={handleSubmit}>
-            {error && 'Si hay error' }
+            {error && <div className="bg-red-600 text-white text-center p-2 font-bold mb-2 rounded-lg"><p>Todos los campos son obligatorios</p></div> }
+
                 <div>
                     <label className="font-bold" htmlFor="nombre">Nombre mascota: {nombre}</label>
                     <input className="block mt-2 border-2 w-full p-2 placeholder-gray-400 rounded-lg" type="text" placeholder="Nombre de la mascota" id="nombre" value={nombre} onChange={ (e) => setNombre(e.target.value) } />
