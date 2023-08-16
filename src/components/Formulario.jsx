@@ -8,7 +8,16 @@ const Formulario = () => {
     const [fecha, setFecha] = useState('');
     const [sintomas, setSintomas] = useState('');
 
-    
+    // validacion del formulario
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if([nombre, propietario, email, fecha, sintomas].includes('')) {
+            console.log('Hay al menos un campo vacio');
+        } else {
+            console.log('Todos los campos están llenos');
+        }
+    };
+
     return (
         <div className="md:w-1/2 lg:w-2/5 mx-5">
             <h2 className="font-black text-2xl text-center">Seguimiento Pacientes</h2>
