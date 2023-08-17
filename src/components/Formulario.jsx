@@ -2,7 +2,9 @@ import { useState} from "react";
 import Error from './Error';
 import PropTypes from 'prop-types';
 
-const Formulario = ({pacientes, setPacientes}) => {
+const Formulario = ({pacientes, setPacientes, paciente}) => {
+
+    console.log(paciente);
 
     const [nombre, setNombre] = useState('');
     const [propietario, setPropietario] = useState('');
