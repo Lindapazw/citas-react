@@ -15,7 +15,13 @@ const Paciente = ({paciente}) => {
 }
 
 Paciente.propTypes = {
-    paciente: PropTypes.array.isRequired,
+        paciente: PropTypes.shape({
+        nombre: PropTypes.string.isRequired,
+        propietario: PropTypes.string.isRequired,
+        email: PropTypes.string.isRequired,
+        fecha: PropTypes.string.isRequired,
+        sintomas: PropTypes.string.isRequired,
+    }).isRequired,
 };
 
 export default Paciente
