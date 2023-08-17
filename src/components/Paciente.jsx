@@ -10,6 +10,11 @@ const Paciente = ({paciente}) => {
             <p className="font-bold mt-3">Email:{' '} <span className="font-normal">{email}</span></p>
             <p className="font-bold mt-3">Fecha alta:{' '} <span className="font-normal">{fecha}</span></p>
             <p className="font-bold mt-3">Síntomas:{' '} <span className="font-normal">{sintomas}</span></p>
+
+            <div className='flex justify-between mt-5'>
+                <button className=' text-white bg-yellow-400 hover:bg-yellow-500 rounded-md p-2 px-10 flex ' type='button'> Editar </button>
+                <button className=' text-white bg-red-600 hover:bg-red-700 rounded-md p-2 px-10 flex ' type='button'>Eliminar</button>
+            </div>
         </div>
     )
 }
