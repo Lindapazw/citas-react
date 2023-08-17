@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Paciente = ({paciente}) => {
 
     const {nombre, propietario, email, fecha, sintomas} = paciente;
@@ -11,5 +13,9 @@ const Paciente = ({paciente}) => {
         </div>
     )
 }
+
+Paciente.propTypes = {
+    paciente: PropTypes.array.isRequired,
+};
 
 export default Paciente
