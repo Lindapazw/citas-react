@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Paciente = ({paciente}) => {
+const Paciente = ({paciente, setPaciente}) => {
 
     const {nombre, propietario, email, fecha, sintomas} = paciente;
     return (
@@ -12,7 +12,7 @@ const Paciente = ({paciente}) => {
             <p className="font-bold mt-3">Síntomas:{' '} <span className="font-normal">{sintomas}</span></p>
 
             <div className='flex justify-between mt-5'>
-                <button className=' text-white bg-yellow-400 hover:bg-yellow-500 rounded-md p-2 px-10 flex ' type='button'> Editar </button>
+                <button className=' text-white bg-yellow-400 hover:bg-yellow-500 rounded-md p-2 px-10 flex ' type='button' onClick={() => setPaciente(paciente)}> Editar </button>
                 <button className=' text-white bg-red-600 hover:bg-red-700 rounded-md p-2 px-10 flex ' type='button'>Eliminar</button>
             </div>
         </div>

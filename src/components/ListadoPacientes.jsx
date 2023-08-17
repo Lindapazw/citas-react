@@ -1,7 +1,7 @@
 import Paciente from "./Paciente";
 import PropTypes from "prop-types";
 
-const ListadoPacientes = ({ pacientes }) => {
+const ListadoPacientes = ({ pacientes, setPaciente }) => {
 
     return (
         <div className="md:w-1/2 lg:w-3/5 md:h-screen overflow-y-scroll mt-5 md:mt-0">
@@ -14,7 +14,7 @@ const ListadoPacientes = ({ pacientes }) => {
                 </p>
         
                     {pacientes.map((paciente) => (
-                        <Paciente key={paciente.id} paciente={paciente} />
+                        <Paciente key={paciente.id} paciente={paciente} setPaciente={setPaciente}/>
                     ))}
             </>
         ) : (
