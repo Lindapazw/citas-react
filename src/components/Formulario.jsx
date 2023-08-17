@@ -1,5 +1,6 @@
 import { useState} from "react";
 import Error from './Error';
+import PropTypes from 'prop-types';
 
 const Formulario = ({pacientes, setPacientes}) => {
 
@@ -84,5 +85,11 @@ const Formulario = ({pacientes, setPacientes}) => {
     )
 
 }
+
+Formulario.propTypes = {
+    pacientes: PropTypes.array.isRequired,
+    setPacientes: PropTypes.func.isRequired,
+};
+
 
 export default Formulario
