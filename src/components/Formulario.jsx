@@ -1,6 +1,6 @@
 import { useState} from "react";
 
-const Formulario = () => {
+const Formulario = ({pacientes, setPacientes}) => {
 
     const [nombre, setNombre] = useState('');
     const [propietario, setPropietario] = useState('');
@@ -17,6 +17,17 @@ const Formulario = () => {
             setError(true);
         } else {
             setError(false);
+
+            // objeto de pacientes
+            const objetoPacientes = {
+                nombre, 
+                propietario, 
+                email, 
+                fecha, 
+                sintomas
+            }
+
+            setPacientes([...pacientes, objetoPacientes]);
         }
     };
 
@@ -31,7 +42,7 @@ const Formulario = () => {
             {error && <div className="bg-red-600 text-white text-center p-2 font-bold mb-2 rounded-lg"><p>Todos los campos son obligatorios</p></div> }
 
                 <div>
-                    <label className="font-bold" htmlFor="nombre">Nombre mascota: {nombre}</label>
+                    <label className="font-bold" htmlFor="nombre">Nombre mascota:</label>
                     <input className="block mt-2 border-2 w-full p-2 placeholder-gray-400 rounded-lg" type="text" placeholder="Nombre de la mascota" id="nombre" value={nombre} onChange={ (e) => setNombre(e.target.value) } />
                 </div>
                 <div className="mt-5">
