@@ -32,7 +32,8 @@ const ListadoPacientes = ({ pacientes, setPaciente }) => {
 };
 
 ListadoPacientes.propTypes = {
-  pacientes: PropTypes.array.isRequired, // Agrega la validación aquí
+    pacientes: PropTypes.array.isRequired,
+    setPaciente: PropTypes.func.isRequired,
 };
 
 export default ListadoPacientes;

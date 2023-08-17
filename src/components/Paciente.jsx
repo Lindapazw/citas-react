@@ -20,13 +20,14 @@ const Paciente = ({paciente, setPaciente}) => {
 }
 
 Paciente.propTypes = {
-        paciente: PropTypes.shape({
+    paciente: PropTypes.shape({
         nombre: PropTypes.string.isRequired,
         propietario: PropTypes.string.isRequired,
         email: PropTypes.string.isRequired,
         fecha: PropTypes.string.isRequired,
         sintomas: PropTypes.string.isRequired,
     }).isRequired,
+    setPaciente: PropTypes.func.isRequired,
 };
 
 export default Paciente
