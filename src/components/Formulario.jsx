@@ -90,7 +90,7 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
                     <textarea className="block border-2 w-full rounded-lg p-2 mt-2" id="sintomas" cols="30" rows="5"  placeholder="Describe los síntomas"  value={sintomas} onChange={ (e) => setSintomas(e.target.value) }></textarea>
                 </div>
 
-                <input className="bg-indigo-600 w-full p-2 text-white font-semibold mt-5 rounded-lg hover:bg-indigo-700 cursor-pointer transition-all" type="submit" value="Agregar paciente"/>
+                <input className="bg-indigo-600 w-full p-2 text-white font-semibold mt-5 rounded-lg hover:bg-indigo-700 cursor-pointer transition-all" type="submit" value={paciente.id? 'Editar paciente' : 'Agregar paciente'}/>
             </form>
         </div>
     )
