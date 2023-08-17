@@ -1,10 +1,8 @@
-import { useState} from "react";
+import { useState, useEffect } from "react";
 import Error from './Error';
 import PropTypes from 'prop-types';
 
 const Formulario = ({pacientes, setPacientes, paciente}) => {
-
-    console.log(paciente);
 
     const [nombre, setNombre] = useState('');
     const [propietario, setPropietario] = useState('');
@@ -13,6 +11,11 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
     const [sintomas, setSintomas] = useState('');
 
     const [error, setError] = useState(false);
+
+    useEffect(() =>{
+
+    }, [paciente]);
+
 
     // error
     const generarId = () => {
@@ -91,7 +94,9 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
 Formulario.propTypes = {
     pacientes: PropTypes.array.isRequired,
     setPacientes: PropTypes.func.isRequired,
+    paciente: PropTypes.object.isRequired, 
 };
+
 
 
 export default Formulario
