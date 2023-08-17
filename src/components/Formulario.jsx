@@ -28,6 +28,13 @@ const Formulario = ({pacientes, setPacientes}) => {
             }
 
             setPacientes([...pacientes, objetoPacientes]);
+
+            // reiniciar el form
+            setNombre('');
+            setPropietario('');
+            setEmail('');
+            setFecha('');
+            setSintomas('');
         }
     };
 
