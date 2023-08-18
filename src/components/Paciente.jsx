@@ -33,8 +33,10 @@ Paciente.propTypes = {
         email: PropTypes.string.isRequired,
         fecha: PropTypes.string.isRequired,
         sintomas: PropTypes.string.isRequired,
+        id: PropTypes.string.isRequired,
     }).isRequired,
     setPaciente: PropTypes.func.isRequired,
+    eliminarPaciente: PropTypes.func.isRequired,
 };
 
 export default Paciente

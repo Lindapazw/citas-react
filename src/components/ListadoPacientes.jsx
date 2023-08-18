@@ -34,6 +34,7 @@ const ListadoPacientes = ({ pacientes, setPaciente, eliminarPaciente}) => {
 ListadoPacientes.propTypes = {
     pacientes: PropTypes.array.isRequired,
     setPaciente: PropTypes.func.isRequired,
+    eliminarPaciente: PropTypes.func.isRequired,
 };
 
 export default ListadoPacientes;
