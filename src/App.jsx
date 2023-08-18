@@ -8,8 +8,9 @@ function App() {
   const [pacientes, setPacientes] = useState([]);
   const [paciente,setPaciente] = useState({});
 
-  const eliminarPaciente = (id) => {
-    console.log(`Eliminando paciente: ${id}`)
+  const eliminarPaciente = id => {
+    const pacientesActualizados = pacientes.filter(paciente => paciente.id !== id);
+    setPacientes(pacientesActualizados);
   }
 
   return (
