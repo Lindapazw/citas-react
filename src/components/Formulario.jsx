@@ -39,16 +39,24 @@ const Formulario = ({pacientes, setPacientes, paciente}) => {
             setError(false);
 
             // objeto de pacientes
-            const objetoPacientes = {
+            const objetoPaciente= {
                 nombre, 
                 propietario, 
                 email, 
                 fecha, 
                 sintomas,
-                id: generarId()
             }
 
-            setPacientes([...pacientes, objetoPacientes]);
+            if(paciente.id) {
+                // Editando registro
+                objetoPaciente.id = paciente.id;
+                const pacientesActualizados = pacientes.map( pacienteState => pacienteState.id === paciente.id? objetoPaciente : pacienteState)
+                setPacientes(pacientesActualizados)
+            } else {
+                // Nuevo registro
+                objetoPaciente.id = generarId();
+                setPacientes([...pacientes, objetoPaciente]);
+            }
 
             // reiniciar el form
             setNombre('');
