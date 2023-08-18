@@ -2,6 +2,13 @@ import PropTypes from 'prop-types';
 
 const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
 
+    const handleEliminar = () => {
+        const respuesta = confirm('Are you sure?');
+        if (respuesta) {
+            eliminarPaciente(id);
+        }
+    }
+
     const {nombre, propietario, email, fecha, sintomas, id} = paciente;
     return (
         <div className="mt-5 bg-white shadow-md rounded-lg py-5 px-5 mx-5">
