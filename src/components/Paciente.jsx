@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-const Paciente = ({paciente, setPaciente}) => {
+const Paciente = ({paciente, setPaciente, eliminarPaciente}) => {
 
-    const {nombre, propietario, email, fecha, sintomas} = paciente;
+    const {nombre, propietario, email, fecha, sintomas, id} = paciente;
     return (
         <div className="mt-5 bg-white shadow-md rounded-lg py-5 px-5 mx-5">
             <p className="font-bold">Nombre:{' '} <span className="font-normal">{nombre}</span></p>
@@ -13,7 +13,7 @@ const Paciente = ({paciente, setPaciente}) => {
 
             <div className='flex justify-between mt-5'>
                 <button className=' text-white bg-yellow-400 hover:bg-yellow-500 rounded-md p-2 px-10 flex ' type='button' onClick={() => setPaciente(paciente)}> Editar </button>
-                <button className=' text-white bg-red-600 hover:bg-red-700 rounded-md p-2 px-10 flex ' type='button'>Eliminar</button>
+                <button className=' text-white bg-red-600 hover:bg-red-700 rounded-md p-2 px-10 flex ' type='button' onClick={() => eliminarPaciente(id)}>Eliminar</button>
             </div>
         </div>
     )
